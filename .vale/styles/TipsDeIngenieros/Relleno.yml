@@ -1,0 +1,13 @@
+extends: existence
+message: "Evita '%s': no aporta información y puede hacer sentir mal a quien no lo entiende."
+level: warning
+ignorecase: true
+tokens:
+  - simplemente
+  - obviamente
+  - claramente
+  - sencillamente
+  - básicamente
+  - evidentemente
+  - es fácil
+  - como todos saben

@@ -1,0 +1,8 @@
+extends: substitution
+message: "Usa '%s' en lugar de '%s' (ver Terminología en CONTRIBUTING.md)."
+level: error
+ignorecase: true
+swap:
+  librerías?: biblioteca
+  deploy(?:ar|ado|amos): desplegar
+  teste(?:ar|ado|amos): probar

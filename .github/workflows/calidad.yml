@@ -1,0 +1,88 @@
+name: calidad
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+permissions:
+  contents: read
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: DavidAnson/markdownlint-cli2-action@21c1be1b93ad9ed58fa840aacc3f279cde2a72ff # v24.2.0
+        with:
+          globs: "**/*.md"
+
+  prosa:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      checks: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: errata-ai/vale-action@518a9136acc6e6668ce7c00d367051e0941e87ff # v3.0.0
+        with:
+          files: all
+          filter_mode: nofilter
+          fail_level: error
+
+  ortografia:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: npm install --no-save --no-audit --no-fund cspell@10.3.6 @cspell/dict-es-es@3.0.9
+      - run: npx cspell --no-progress --gitignore "**/*.md"
+
+  enlaces:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --config lychee.toml --no-progress "**/*.md"
+          fail: true
+
+  referencias:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Cada página de contenido tiene "## Referencias"
+        run: |
+          faltan=0
+          while IFS= read -r archivo; do
+            if ! grep -q '^## Referencias' "$archivo"; then
+              echo "::error file=$archivo::Falta la sección '## Referencias'"
+              faltan=1
+            fi
+          done < <(find arquitectura principios git -name '*.md' 2>/dev/null)
+          exit "$faltan"
+
+  titulo-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          types: |
+            docs
+            fix
+            ci
+            chore
+            style
+            refactor
+          scopes: |
+            arquitectura
+            principios
+            git
+            repo
+            deps
+          requireScope: false
+          subjectPattern: ^(?![A-Z]).+$
+          subjectPatternError: La descripción del título empieza en minúscula.

@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "language": "es,en",
+  "import": [
+    "@cspell/dict-es-es/cspell-ext.json"
+  ],
+  "ignorePaths": [
+    "LICENSE",
+    "LICENSE-CODE",
+    "node_modules",
+    ".vale/styles",
+    "package-lock.json"
+  ],
+  "words": [
+    "coautoría",
+    "Cockburn",
+    "Diátaxis",
+    "Joako",
+    "Josspoot",
+    "lychee",
+    "markdownlint",
+    "Mermaid",
+    "microservicios",
+    "noreply",
+    "ortografia",
+    "Poot",
+    "redibujes",
+    "squash",
+    "Terminologia",
+    "trailers",
+    "Vale"
+  ]
+}

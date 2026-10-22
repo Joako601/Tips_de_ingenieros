@@ -1,0 +1,24 @@
+name: Propuesta de tema
+description: Proponer una página nueva o ampliar una existente.
+title: "docs: "
+labels: ["propuesta"]
+body:
+  - type: input
+    id: tema
+    attributes:
+      label: Tema
+    validations:
+      required: true
+  - type: textarea
+    id: motivo
+    attributes:
+      label: Qué problema le resuelve a quien lee
+    validations:
+      required: true
+  - type: textarea
+    id: fuentes
+    attributes:
+      label: Fuentes primarias
+      description: Libros, artículos o especificaciones originales sobre el tema.
+    validations:
+      required: true

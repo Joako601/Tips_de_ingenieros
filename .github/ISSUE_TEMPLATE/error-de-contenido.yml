@@ -1,0 +1,32 @@
+name: Error de contenido
+description: Algo de una página es incorrecto, está desactualizado o cita mal una fuente.
+title: "fix: "
+labels: ["error de contenido"]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Página
+      description: Ruta del archivo, por ejemplo arquitectura/hexagonal.md
+    validations:
+      required: true
+  - type: textarea
+    id: afirmacion
+    attributes:
+      label: Qué dice la página
+      description: Cita el fragmento que consideras incorrecto.
+    validations:
+      required: true
+  - type: textarea
+    id: correccion
+    attributes:
+      label: Qué debería decir
+    validations:
+      required: true
+  - type: textarea
+    id: fuente
+    attributes:
+      label: Fuente
+      description: Libro con capítulo o página, o URL. Sin fuente no podemos verificar la corrección.
+    validations:
+      required: true

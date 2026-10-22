@@ -1,0 +1,4 @@
+node_modules/
+.lycheecache
+.vale/styles/*
+!.vale/styles/TipsDeIngenieros/

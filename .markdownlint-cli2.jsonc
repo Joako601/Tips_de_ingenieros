@@ -1,0 +1,10 @@
+{
+  "config": {
+    "default": true,
+    // La prosa no se corta por largo de línea: los diffs se revisan por párrafo.
+    "MD013": false,
+    "MD024": { "siblings_only": true },
+    "MD033": false
+  },
+  "ignores": ["node_modules/**", ".vale/styles/**", ".github/pull_request_template.md"]
+}
