@@ -1,5 +1,3 @@
-# Enlaces del propio repositorio: dan 404 sin sesión mientras sea privado.
-exclude = ['^https://github\.com/Joako601/Tips_de_ingenieros']
 exclude_path = ['(^|/)node_modules/', '(^|/)\.vale/styles/']
 include_fragments = "full"
 accept = ["200..=299", "429"]
