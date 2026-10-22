@@ -42,7 +42,7 @@ Ejemplo: `docs(arquitectura): agrega la página de arquitectura hexagonal`.
 Cuando una sección se escribe entre los dos, el commit lleva el trailer de quien no hace el commit, al final del mensaje y separado del cuerpo por una línea en blanco:
 
 ```text
-Co-authored-by: Josue Poot Mateo <208691436+Josspoot@users.noreply.github.com>
+Co-authored-by: Josspoot <208691436+Josspoot@users.noreply.github.com>
 Co-authored-by: Joako601 <242209193+Joako601@users.noreply.github.com>
 ```
 

@@ -30,7 +30,7 @@ Lee [CONTRIBUTING.md](CONTRIBUTING.md). Ningún cambio entra a `main` sin un pul
 
 ## Cómo citar
 
-> Joako601 y Poot Mateo, J. *Tips de ingenieros*. GitHub, 2026. Licencia CC BY 4.0.
+> Joako601 y Josspoot. *Tips de ingenieros*. GitHub, 2026. Licencia CC BY 4.0.
 
 Indica la página concreta y, si puedes, el commit que consultaste.
 
@@ -42,4 +42,4 @@ Indica la página concreta y, si puedes, el commit que consultaste.
 ## Autores
 
 - [@Joako601](https://github.com/Joako601)
-- Josue Poot Mateo ([@Josspoot](https://github.com/Josspoot))
+- [@Josspoot](https://github.com/Josspoot)
