@@ -183,9 +183,9 @@ En C# con .NET 8 la estructura es la misma: los puertos son `interface`, el serv
 
 ## Referencias
 
-- Cockburn, A. (2005). *Hexagonal Architecture* (HaT Technical Report 2005.02). https://alistair.cockburn.us/hexagonal-architecture/ (consultado el 2026-10-22; [copia archivada](https://web.archive.org/web/20261014214454/https://alistair.cockburn.us/hexagonal-architecture)). Fuente del objetivo del patrón, de la definición de puerto como conversación con propósito, de los nombres de los lados y de la aclaración sobre el número seis.
+- Cockburn, A. (2005). *Hexagonal Architecture* (HaT Technical Report 2005.02). <https://alistair.cockburn.us/hexagonal-architecture/> (consultado el 2026-10-22; [copia archivada](https://web.archive.org/web/20261014214454/https://alistair.cockburn.us/hexagonal-architecture)). Fuente del objetivo del patrón, de la definición de puerto como conversación con propósito, de los nombres de los lados y de la aclaración sobre el número seis.
 - Cockburn, A. y Garrido de Paz, J. M. (2024). *Hexagonal Architecture Explained*. Humans and Technology. ISBN 978-1-7375197-8-2. Desarrollo extenso del patrón por su autor, con código y preguntas frecuentes.
-- Palermo, J. (2008). *The Onion Architecture: part 1*. https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/ (consultado el 2026-10-22). Cita la arquitectura hexagonal como antecedente.
-- Martin, R. C. (2012). *The Clean Architecture*. https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html (consultado el 2026-10-22). Nombra la hexagonal entre las arquitecturas que unifica y enuncia la regla de dependencias.
+- Palermo, J. (2008). *The Onion Architecture: part 1*. <https://jeffreypalermo.com/2008/07/the-onion-architecture-part-1/> (consultado el 2026-10-22). Cita la arquitectura hexagonal como antecedente.
+- Martin, R. C. (2012). *The Clean Architecture*. <https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html> (consultado el 2026-10-22). Nombra la hexagonal entre las arquitecturas que unifica y enuncia la regla de dependencias.
 
 Última revisión: 2026-10-22
