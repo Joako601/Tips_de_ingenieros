@@ -88,7 +88,7 @@ Un check del CI exige que cada página de contenido tenga la sección `## Refere
 Formato de una referencia:
 
 ```markdown
-- Cockburn, A. (2005). *Hexagonal Architecture*. https://alistair.cockburn.us/hexagonal-architecture/ (consultado el 2026-10-22).
+- Cockburn, A. (2005). *Hexagonal Architecture*. <https://alistair.cockburn.us/hexagonal-architecture/> (consultado el 2026-10-22).
 - Evans, E. (2003). *Domain-Driven Design*. Addison-Wesley, cap. 4.
 ```
 
