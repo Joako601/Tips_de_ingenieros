@@ -25,7 +25,7 @@ Co-authored-by: Nombre <correo>
 ```
 
 | Tipo | Cuándo |
-|---|---|
+| --- | --- |
 | `docs` | Contenido nuevo o modificado en una página |
 | `fix` | Corrección de un error de contenido o de un enlace |
 | `ci` | Workflows y configuración de los checks |
@@ -42,7 +42,7 @@ Ejemplo: `docs(arquitectura): agrega la página de arquitectura hexagonal`.
 Cuando una sección se escribe entre los dos, el commit lleva el trailer de quien no hace el commit, al final del mensaje y separado del cuerpo por una línea en blanco:
 
 ```text
-Co-authored-by: Josue Poot Mateo <208691436+Josspoot@users.noreply.github.com>
+Co-authored-by: Josspoot <208691436+Josspoot@users.noreply.github.com>
 Co-authored-by: Joako601 <242209193+Joako601@users.noreply.github.com>
 ```
 
@@ -96,9 +96,7 @@ Formato de una referencia:
 
 - Español neutro, con tuteo.
 - Oraciones cortas y voz activa. Una idea por párrafo.
-<!-- vale TipsDeIngenieros.Relleno = NO -->
-- Sin relleno: evita "simplemente", "obviamente" y parecidos.
-<!-- vale TipsDeIngenieros.Relleno = YES --> Lo que es obvio para ti no lo es para quien lee.
+- Sin relleno: evita `simplemente`, `obviamente` y parecidos. Lo que es obvio para ti no lo es para quien lee.
 - Los términos técnicos en inglés van en cursiva la primera vez y se explican, por ejemplo *pull request*.
 - Los enlaces describen su destino. Nunca escribas "clic aquí".
 - Los diagramas van en Mermaid y las imágenes llevan texto alternativo.
@@ -110,7 +108,7 @@ Formato de una referencia:
 <!-- cspell:disable -->
 
 | Usamos | En lugar de |
-|---|---|
+| --- | --- |
 | biblioteca | librería |
 | desplegar | deployar |
 | probar | testear |
@@ -124,7 +122,7 @@ El linter de prosa (Vale) aplica esta tabla. Para agregar un término, modifica 
 ## Checks automáticos
 
 | Check | Qué valida |
-|---|---|
+| --- | --- |
 | `markdown` | Formato Markdown (markdownlint-cli2) |
 | `prosa` | Terminología y palabras de relleno (Vale) |
 | `ortografia` | Ortografía en español e inglés (cspell) |
@@ -141,7 +139,7 @@ Al contribuir aceptas que el texto se publique bajo [CC BY 4.0](LICENSE) y el c�
 ## Decisiones
 
 | Decisión | Motivo |
-|---|---|
+| --- | --- |
 | Español como idioma | Hay menos referencias de calidad en español con fuentes primarias citadas |
 | CC BY 4.0 para texto y MIT para código | Creative Commons desaconseja sus licencias para software |
 | Squash and merge como único método | Un commit por PR en `main`, con el título validado y los trailers de coautoría incluidos |
