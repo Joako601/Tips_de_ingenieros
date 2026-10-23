@@ -1,3 +1,5 @@
+# ACM rechaza con 403 las peticiones automáticas desde el CI; sus DOI son estables por diseño.
+exclude = ['^https://doi\.org/10\.1145/', '^https://dl\.acm\.org/']
 exclude_path = ['(^|/)node_modules/', '(^|/)\.vale/styles/']
 include_fragments = "full"
 accept = ["200..=299", "429"]
