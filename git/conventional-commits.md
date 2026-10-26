@@ -44,7 +44,7 @@ Un mensaje tiene hasta tres partes, separadas por una línea en blanco:
 
 - **Encabezado.** El tipo es obligatorio, va seguido de dos puntos y un espacio, y después la descripción. El alcance va entre paréntesis y nombra una sección del proyecto: `fix(pedidos):`.
 - **Cuerpo.** Texto libre, en uno o varios párrafos. Es el lugar para explicar el porqué del cambio, que el diff no muestra.
-- **Pies** (*footers*). Líneas con la forma `Clave: valor` o `Clave #valor`, al estilo de los *trailers* de Git. La clave usa guiones en lugar de espacios (`Reviewed-by`, `Co-authored-by`, `Refs`). La única excepción es `BREAKING CHANGE`, que se escribe con espacio y siempre en mayúsculas.
+- **Pies** (*footers*). Líneas con la forma `Clave: valor` o `Clave #valor`, al estilo de los *trailers* de Git. La clave usa guiones en lugar de espacios (`Reviewed-by`, `Co-authored-by`, `Refs`). La única excepción es `BREAKING CHANGE`, que se escribe con espacio y siempre en mayúsculas. La especificación acepta también `BREAKING-CHANGE`, con guion, como sinónimo.
 
 Un cambio incompatible se marca de una de dos formas, o con ambas: un `!` justo antes de los dos puntos (`feat(api)!:`) o un pie `BREAKING CHANGE: descripción`. Puede aparecer en commits de cualquier tipo.
 
@@ -77,7 +77,7 @@ flowchart LR
 ## Cuándo no usarlo
 
 - **Repositorios personales o de un solo uso.** Si nadie más lee el historial y no publicas versiones, la convención agrega pasos sin un lector que los aproveche.
-- **Equipos que fusionan con *squash* y no revisan el mensaje final.** Si el commit que llega a `main` lo escribe la herramienta a partir de los títulos de cada commit, el formato de los commits intermedios se pierde. En ese caso conviene validar el título del *pull request*, que es lo que queda, en lugar de cada commit.
+- **Validar cada commit en equipos que fusionan con *squash*.** Si el commit que llega a `main` toma el título del *pull request*, el formato de los commits intermedios se pierde; en ese caso conviene validar el título del PR, que es lo que queda.
 - **Proyectos que no se versionan.** Gran parte del valor está en automatizar SemVer y las notas de versión. Sin versiones, queda solo el beneficio de un historial ordenado, que se puede lograr con reglas más livianas.
 - **Como sustituto de commits pequeños.** Un prefijo correcto no arregla un commit que mezcla tres cambios. La especificación misma recomienda separar el trabajo en varios commits cuando un cambio encaja en más de un tipo.
 
@@ -138,7 +138,7 @@ Co-authored-by: Joako601 <242209193+Joako601@users.noreply.github.com>
 
 Con este historial, una herramienta calcula que la próxima versión es mayor (por el `!`), agrupa el `feat` y el `fix` en las notas, y deja fuera el `chore`.
 
-Para validar los mensajes antes de que lleguen al repositorio puedes usar commitlint, que es lo que hace este proyecto en `commitlint.config.mjs`:
+Para validar los mensajes antes de que lleguen al repositorio puedes usar commitlint. Este ejemplo está adaptado al dominio de pedidos; la configuración que usa este proyecto está en [`commitlint.config.mjs`](../commitlint.config.mjs) y además desactiva los límites de largo del cuerpo y de los pies:
 
 ```js
 export default {
@@ -155,6 +155,6 @@ export default {
 - Angular (2018). *Commit Message Guidelines*, en `CONTRIBUTING.md`, commit `22b96b9`. <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md> (consultado el 2026-10-23; [copia archivada](https://web.archive.org/web/20261016070822/https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md)). Antecedente que la especificación enlaza; origen de la lista de tipos y de las reglas de imperativo, minúscula y sin punto final.
 - Preston-Werner, T. (s. f.). *Versionado Semántico 2.0.0*. <https://semver.org/lang/es/> (consultado el 2026-10-23; [copia archivada de la versión en inglés](https://web.archive.org/web/20261012051309/https://semver.org/spec/v2.0.0.html)). Definición de las versiones mayor, menor y de parche.
 - Git (s. f.). *git-interpret-trailers*. <https://git-scm.com/docs/git-interpret-trailers> (consultado el 2026-10-23; [copia archivada](https://web.archive.org/web/20260925170148/https://git-scm.com/docs/git-interpret-trailers)). Formato de los *trailers* en el que se inspiran los pies.
-- commitlint (s. f.). *@commitlint/config-conventional*. <https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional> (consultado el 2026-10-23). Lista de tipos por defecto y reglas de validación.
+- commitlint (s. f.). *@commitlint/config-conventional*. <https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional> (consultado el 2026-10-23; [copia archivada](https://web.archive.org/web/20261014023521/https://github.com/conventional-changelog/commitlint/tree/master/%40commitlint/config-conventional)). Lista de tipos por defecto y reglas de validación.
 
-Última revisión: 2026-10-23
+Última revisión: 2026-10-26
