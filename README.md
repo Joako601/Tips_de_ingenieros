@@ -16,6 +16,7 @@ Para desarrolladores que ya programan y quieren entender por qué se recomiendan
 | `principios/` | SOLID; DRY, KISS y YAGNI; patrones de diseño | Pendiente |
 | `git/` | Conventional Commits, estrategias de ramas, code review | Pendiente |
 | `pruebas/` | Pirámide y trofeo, dobles de prueba, TDD | Pendiente |
+| `datos/` | Transacciones y aislamiento, concurrencia optimista y pesimista, ORM y N+1 | Pendiente |
 
 ## Cómo leer cada página
 
