@@ -15,6 +15,7 @@ Para desarrolladores que ya programan y quieren entender por qué se recomiendan
 | `arquitectura/` | Capas, hexagonal, clean architecture, microservicios | Pendiente |
 | `principios/` | SOLID; DRY, KISS y YAGNI; patrones de diseño | Pendiente |
 | `git/` | Conventional Commits, estrategias de ramas, code review | Pendiente |
+| `pruebas/` | Pirámide y trofeo, dobles de prueba, TDD | Pendiente |
 
 ## Cómo leer cada página
 
