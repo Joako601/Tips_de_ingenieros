@@ -1,6 +1,7 @@
 # ACM rechaza con 403 las peticiones automáticas desde el CI; sus DOI son estables por diseño.
 # melconway.com no responde a tiempo a los servidores de GitHub de forma intermitente; la página tiene copia archivada.
-exclude = ['^https://doi\.org/10\.1145/', '^https://dl\.acm\.org/', '^https://www\.melconway\.com/']
+# Substack rechaza con 403 las peticiones desde el CI; las referencias tienen copia archivada.
+exclude = ['^https://doi\.org/10\.1145/', '^https://dl\.acm\.org/', '^https://www\.melconway\.com/', '^https://[a-z0-9-]+\.substack\.com/']
 exclude_path = ['(^|/)node_modules/', '(^|/)\.vale/styles/']
 include_fragments = "full"
 accept = ["200..=299", "429"]
