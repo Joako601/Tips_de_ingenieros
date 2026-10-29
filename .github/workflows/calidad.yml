@@ -58,7 +58,7 @@ jobs:
               echo "::error file=$archivo::Falta la sección '## Referencias'"
               faltan=1
             fi
-          done < <(find arquitectura principios git pruebas -name '*.md' 2>/dev/null)
+          done < <(find arquitectura principios git pruebas datos -name '*.md' 2>/dev/null)
           exit "$faltan"
 
   titulo-pr:
@@ -82,6 +82,7 @@ jobs:
             principios
             git
             pruebas
+            datos
             repo
             deps
           requireScope: false
