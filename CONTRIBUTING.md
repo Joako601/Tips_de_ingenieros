@@ -33,7 +33,7 @@ Co-authored-by: Nombre <correo>
 | `style` | Formato sin cambio de significado |
 | `refactor` | Reorganizar páginas sin cambiar lo que dicen |
 
-Alcances permitidos: `arquitectura`, `principios`, `git`, `repo`, `deps`. El alcance es opcional.
+Alcances permitidos: `arquitectura`, `principios`, `git`, `pruebas`, `repo`, `deps`. El alcance es opcional.
 
 Ejemplo: `docs(arquitectura): agrega la página de arquitectura hexagonal`.
 
@@ -56,7 +56,7 @@ git log --format='%h %s%n%(trailers:key=Co-authored-by)'
 
 ## Estructura de una página
 
-Cada página del contenido (`arquitectura/`, `principios/`, `git/`) es de un solo tipo según [Diátaxis](https://diataxis.fr/): explicación, referencia o guía práctica. No mezcles tipos en una página.
+Cada página del contenido (`arquitectura/`, `principios/`, `git/`, `pruebas/`) es de un solo tipo según [Diátaxis](https://diataxis.fr/): explicación, referencia o guía práctica. No mezcles tipos en una página.
 
 Usa estas secciones, en este orden:
 
