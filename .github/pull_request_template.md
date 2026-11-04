@@ -17,4 +17,4 @@
 ## Para quien revisa
 
 - [ ] Abrí las fuentes y comprobé las afirmaciones principales.
-- [ ] Al fusionar, el mensaje del squash conserva los trailers `Co-authored-by`.
+- [ ] Al fusionar, el mensaje del merge o del squash conserva los trailers `Co-authored-by`.
