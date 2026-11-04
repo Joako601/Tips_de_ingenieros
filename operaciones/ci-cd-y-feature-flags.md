@@ -1,6 +1,6 @@
 # Entrega continua y *feature flags*: desplegar no es lanzar
 
-<!-- cspell:words Hodgson Humble Farley Knight Capital SMARS Power Peg toggle toggles feature flags kill switch router javac despliegue desplegar desplegado desplegada lanzar lanzamiento cubos cubo hash -->
+<!-- cspell:words Hodgson Humble Farley Knight Capital SMARS Power Peg toggle toggles feature flags kill switch router javac despliegue desplegar desplegado desplegada lanzar lanzamiento cubos cubo hash deshacerlo envio Envio funcion mezclarlos trátala -->
 
 > **Tipo de página:** explicación. Te ayuda a entender por qué separar el despliegue de una función de su lanzamiento reduce el riesgo, y qué costo tienen los interruptores que lo hacen posible; no es una guía de una herramienta de despliegue concreta.
 
