@@ -1,6 +1,6 @@
 # Observabilidad: registros, métricas y trazas
 
-<!-- cspell:words Micrometer OpenTelemetry traceparent traceId pedidoId clienteId trace-id span span-id observabilidad Saturación saturación trazas traza registros métricas JSON Beyer Petoff Murphy Fong-Jones Majors cardinalidad cardinalidades estructurado estructurados -->
+<!-- cspell:words Micrometer OpenTelemetry traceparent traceId pedidoId clienteId trace-id span span-id observabilidad Saturación saturación trazas traza registros métricas JSON Beyer Petoff Murphy Fong-Jones Majors cardinalidad cardinalidades estructurado estructurados correlacionar metricas -->
 
 > **Tipo de página:** explicación. Te ayuda a entender qué pregunta responde cada señal y cómo se conectan entre sí; no es una guía de una herramienta de monitoreo concreta.
 
