@@ -6,7 +6,7 @@ exclude = ['^https://doi\.org/10\.1145/', '^https://dl\.acm\.org/', '^https://ww
 exclude_path = ['(^|/)node_modules/', '(^|/)\.vale/styles/']
 include_fragments = "full"
 accept = ["200..=299", "429"]
-# web.archive.org responde con 500 y errores de HTTP/2 de forma intermitente cuando recibe muchas peticiones a la vez.
+# web.archive.org responde con 500 y errores de HTTP/2 de forma intermitente; la causa probable es el exceso de peticiones simultáneas.
 # Se reintenta más veces, con más espera, y esos fallos no se guardan en la caché.
 max_retries = 5
 retry_wait_time = 5
