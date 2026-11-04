@@ -1,6 +1,6 @@
 # Estrategias de caché: *cache-aside*, TTL e invalidación
 
-<!-- cspell:words Nishtala memcache memcached Chhabra Redis stampede thundering herd cache-aside write-through TTL invalidación invalidar invalidada caché cachear cacheado cacheados coalescing javac lease leases look-aside demand-filled -->
+<!-- cspell:words Nishtala memcache memcached Chhabra Redis stampede thundering herd cache-aside write-through TTL invalidación invalidar invalidada caché cachear cacheado cacheados coalescing javac lease leases look-aside demand-filled cachés desactualización desactualizados idempotente idempotentes NSDI -->
 
 > **Tipo de página:** explicación. Te ayuda a decidir qué conviene guardar en una caché, por cuánto tiempo y cómo evitar que su caída o su vaciado tumbe el sistema; no es una guía de un producto concreto.
 
