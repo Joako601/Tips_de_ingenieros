@@ -1,6 +1,6 @@
 # Sesiones con estado y tokens JWT
 
-<!-- cspell:words Sakimura Bradley Lodderstedt Fett Labunets Sheffer HttpOnly SameSite localStorage sessionStorage JWT JWS JWE claims refresh tokens token revocar revocación rotativos rotativo opaco opacos entropía criptográfico -->
+<!-- cspell:words Sakimura Bradley Lodderstedt Fett Labunets Sheffer HttpOnly SameSite localStorage sessionStorage JWT JWS JWE claims refresh tokens token revocar revocación rotativos rotativo opaco opacos entropía criptográfico Hardt mezclarlas -->
 
 > **Tipo de página:** explicación. Te ayuda a decidir cómo reconoce tu servidor a un usuario ya autenticado y qué cuesta cada opción; no es una guía de un *framework* concreto.
 
