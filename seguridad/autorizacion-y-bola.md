@@ -1,6 +1,6 @@
 # Autorización y BOLA
 
-<!-- cspell:words BOLA IDOR Saltzer Schroeder autenticar autenticado autorizar autorización autenticación mediación javac PreAuthorize -->
+<!-- cspell:words BOLA IDOR Saltzer Schroeder autenticar autenticado autorizar autorización autenticación mediación javac PreAuthorize autoincrementales Crossref -->
 
 > **Tipo de página:** explicación. Te ayuda a distinguir autenticar de autorizar y a entender por qué un endpoint que comprueba el rol sigue siendo vulnerable; no es una guía de un *framework* concreto.
 
