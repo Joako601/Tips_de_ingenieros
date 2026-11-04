@@ -1,6 +1,6 @@
 # Validación por capas y prevención de inyecciones
 
-<!-- cspell:words JPQL JPA Hibernate PedidoEntity PedidoRequest NotBlank parametrizar parametrizada parametrizadas parametrizado enlazados enlazar semántica semánticas sintáctica sintácticas lista-permitida inyecciones inyección -->
+<!-- cspell:words JPQL JPA Hibernate PedidoEntity PedidoRequest NotBlank parametrizar parametrizada parametrizadas parametrizado enlazados enlazar semántica semánticas sintáctica sintácticas lista-permitida inyecciones inyección concatenarla concatenarlo concatenarlos desincronizadas -->
 
 > **Tipo de página:** explicación. Te ayuda a separar qué se valida en cada capa de qué protege realmente contra una inyección; no es una guía de un *framework* concreto.
 
