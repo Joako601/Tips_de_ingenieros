@@ -1,6 +1,6 @@
 name: main
 
-# Valida el commit que quedó en main después del squash, incluido el mensaje editado al fusionar.
+# Valida el commit que quedó en main después de fusionar, incluido el mensaje editado al fusionar.
 on:
   push:
     branches: [main]
