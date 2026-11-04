@@ -58,7 +58,7 @@ jobs:
               echo "::error file=$archivo::Falta la sección '## Referencias'"
               faltan=1
             fi
-          done < <(find arquitectura principios git pruebas datos apis sistemas-distribuidos seguridad -name '*.md' 2>/dev/null)
+          done < <(find arquitectura principios git pruebas datos apis sistemas-distribuidos seguridad operaciones -name '*.md' 2>/dev/null)
           exit "$faltan"
 
   titulo-pr:
@@ -86,6 +86,7 @@ jobs:
             apis
             sistemas-distribuidos
             seguridad
+            operaciones
             repo
             deps
           requireScope: false
