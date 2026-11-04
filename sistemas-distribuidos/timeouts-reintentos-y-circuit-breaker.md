@@ -1,6 +1,6 @@
 # Timeouts, reintentos y *circuit breaker*
 
-<!-- cspell:words Nygard Brooker Fowler Resilience4j Polly jitter backoff timeout timeouts timelimiter circuit breaker half-open Pasarela PasarelaDePagos latencia percentil reintentos reintento reintentar -->
+<!-- cspell:words Nygard Brooker Fowler Resilience4j Polly jitter backoff timeout timeouts timelimiter circuit breaker half-open Pasarela PasarelaDePagos latencia percentil reintentos reintento reintentar Antipatterns circuitbreaker desactualizados idempotente idempotentes reintenta reintentan reintentarse -->
 
 > **Tipo de página:** explicación. Te ayuda a entender cómo se protege un servicio de las llamadas lentas o fallidas a otro servicio; no es una guía de una biblioteca concreta.
 

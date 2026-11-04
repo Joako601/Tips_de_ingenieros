@@ -1,6 +1,6 @@
 # El problema de la doble escritura y el *Transactional Outbox*
 
-<!-- cspell:words Richardson relevador relevadores outbox fantasma at-least-once Kafka RabbitMQ jsonb timestamptz idempotentes idempotente -->
+<!-- cspell:words Richardson relevador relevadores outbox fantasma at-least-once Kafka RabbitMQ jsonb timestamptz idempotentes idempotente Interprocess -->
 
 > **Tipo de página:** explicación. Te ayuda a entender por qué guardar en la base de datos y publicar un mensaje no es una sola operación, y cómo el patrón *Transactional Outbox* lo resuelve; no es una guía de un *broker* concreto.
 

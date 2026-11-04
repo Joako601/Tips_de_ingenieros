@@ -1,6 +1,6 @@
 # Sagas: coreografía y orquestación
 
-<!-- cspell:words Richardson Garcia-Molina Salem sagas saga coreografía orquestación orquestador compensatoria compensatorias aislamiento Inventario Pagos -->
+<!-- cspell:words Richardson Garcia-Molina Salem sagas saga coreografía orquestación orquestador compensatoria compensatorias aislamiento Inventario Pagos Crossref javac reintenta reintentarse SIGMOD -->
 
 > **Tipo de página:** explicación. Te ayuda a entender cómo se mantiene la consistencia de una operación de negocio que atraviesa varios servicios sin una transacción distribuida; no es una guía de un *framework* concreto.
 
