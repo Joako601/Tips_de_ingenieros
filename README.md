@@ -19,6 +19,7 @@ Para desarrolladores que ya programan y quieren entender por qué se recomiendan
 | `datos/` | Transacciones y aislamiento, concurrencia optimista y pesimista, ORM y N+1 | Pendiente |
 | `apis/` | REST y modelo de Richardson, idempotencia, paginación | Pendiente |
 | `sistemas-distribuidos/` | Outbox y eventos, sagas, timeouts, reintentos y circuit breaker | Pendiente |
+| `seguridad/` | Sesiones y JWT, autorización y BOLA, validación e inyección | Pendiente |
 
 ## Cómo leer cada página
 
