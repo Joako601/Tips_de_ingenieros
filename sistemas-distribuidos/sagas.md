@@ -14,7 +14,7 @@ Una transacción distribuida con *two-phase commit* (2PC) resolvería el caso, p
 
 Una **saga** implementa una operación de negocio que abarca varios servicios como una secuencia coordinada de **transacciones locales**: cada servicio actualiza su propia base de datos con una transacción normal.
 
-Si un paso falla por incumplir una regla de negocio, los pasos ya completados se deshacen con **transacciones compensatorias**. No son un `ROLLBACK`: son operaciones nuevas, escritas a mano, que revierten el efecto de negocio de un paso anterior (por ejemplo, liberar el stock reservado). El concepto viene del artículo *Sagas* de Garcia-Molina y Salem (1987), anterior a los microservicios, y la aplicación a servicios separados es posterior.
+Si un paso falla por incumplir una regla de negocio, los pasos ya completados se deshacen con **transacciones compensatorias**. No son un `ROLLBACK`: son operaciones nuevas, escritas a mano, que revierten el efecto de negocio de un paso anterior (por ejemplo, liberar el stock reservado). El concepto viene del artículo *Sagas* de Garcia-Molina y Salem (1987), anterior a los [microservicios](../arquitectura/microservicios.md), y la aplicación a servicios separados es posterior.
 
 Hay dos formas de coordinar los pasos:
 
@@ -71,7 +71,7 @@ La diferencia práctica entre los dos estilos:
 
 ## Confusiones frecuentes
 
-- **"Una saga da las mismas garantías que una transacción ACID."** No da aislamiento (la **I** de ACID). Mientras la saga está a mitad de camino, otros usuarios o sagas pueden ver o modificar datos intermedios, como un pedido en estado `PENDIENTE`. Richardson llama *countermeasures* a las técnicas de diseño que compensan esa falta, y las desarrolla en su libro, no en la página del patrón.
+- **"Una saga da las mismas garantías que una transacción ACID."** No da aislamiento (la **I** de [ACID](../datos/transacciones-y-acid.md)). Mientras la saga está a mitad de camino, otros usuarios o sagas pueden ver o modificar datos intermedios, como un pedido en estado `PENDIENTE`. Richardson llama *countermeasures* a las técnicas de diseño que compensan esa falta, y las desarrolla en su libro, no en la página del patrón.
 - **"La compensación es un `ROLLBACK`."** Es una operación nueva con su propio efecto. Cancelar un pedido ya confirmado deja rastro (un pedido cancelado, un reembolso), no lo borra como si nunca hubiera pasado.
 - **"Orquestación es mejor que coreografía."** Depende del número de servicios y de cuánto necesites ver el flujo. Con dos o tres participantes la coreografía suele bastar; con más pasos y ramas, el flujo repartido en eventos se vuelve difícil de seguir.
 - **"Si un paso falla, la saga se queda a medias."** Está diseñada para lo contrario: o termina todos los pasos o ejecuta las compensaciones. Lo que puede quedar a medias es una compensación que falla, y para eso se reintenta.
