@@ -6,7 +6,7 @@
 #   scripts/comprobar.sh referencias           corre solo los que nombres
 #
 # Chequeos: referencias, ortografia, markdown, prosa, enlaces.
-# Las carpetas de contenido y las versiones de cspell se leen de calidad.yml para no duplicarlas.
+# Las carpetas de contenido salen de scripts/carpetas.sh y las versiones de cspell, de calidad.yml.
 # El script no descarga ni ejecuta binarios sueltos: vale y lychee se usan solo si ya están instalados.
 
 set -u
@@ -26,9 +26,8 @@ omitidos=()
 encabezado() { printf '\n==> %s\n' "$1"; }
 
 referencias() {
-  local carpetas faltan=0 archivo
-  carpetas=$(sed -n 's/.*done < <(find \(.*\) -name .*/\1/p' "$FLUJO")
-  [ -n "$carpetas" ] || { echo "No encontré la lista de carpetas en $FLUJO"; return 1; }
+  local carpetas carpeta faltan=0 archivo
+  carpetas=$(sh scripts/carpetas.sh)
   # shellcheck disable=SC2086
   while IFS= read -r archivo; do
     if ! grep -q '^## Referencias' "$archivo"; then
@@ -36,6 +35,12 @@ referencias() {
       faltan=1
     fi
   done < <(find $carpetas -name '*.md' 2>/dev/null)
+  for carpeta in $carpetas; do
+    if ! grep -qF "\`$carpeta/\`" README.md; then
+      echo "Falta la carpeta '$carpeta/' en el índice del README"
+      faltan=1
+    fi
+  done
   return "$faltan"
 }
 
