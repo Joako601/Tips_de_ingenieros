@@ -58,14 +58,36 @@ jobs:
               echo "::error file=$archivo::Falta la sección '## Referencias'"
               faltan=1
             fi
-          done < <(find arquitectura principios git pruebas datos apis sistemas-distribuidos seguridad operaciones -name '*.md' 2>/dev/null)
+          done < <(find $(sh scripts/carpetas.sh) -name '*.md' 2>/dev/null)
+          exit "$faltan"
+      - name: Cada carpeta de contenido aparece en el índice del README
+        run: |
+          faltan=0
+          for carpeta in $(sh scripts/carpetas.sh); do
+            if ! grep -qF "\`$carpeta/\`" README.md; then
+              echo "::error file=README.md::Falta la carpeta '$carpeta/' en el índice"
+              faltan=1
+            fi
+          done
           exit "$faltan"
 
   titulo-pr:
     runs-on: ubuntu-latest
     permissions:
+      contents: read
       pull-requests: read
     steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Alcances permitidos
+        id: alcances
+        run: |
+          {
+            echo 'lista<<FIN'
+            sh scripts/carpetas.sh
+            echo repo
+            echo deps
+            echo FIN
+          } >> "$GITHUB_OUTPUT"
       - uses: amannn/action-semantic-pull-request@48f256284bd46cdaab1048c3721360e808335d50 # v6.1.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -77,18 +99,7 @@ jobs:
             chore
             style
             refactor
-          scopes: |
-            arquitectura
-            principios
-            git
-            pruebas
-            datos
-            apis
-            sistemas-distribuidos
-            seguridad
-            operaciones
-            repo
-            deps
+          scopes: ${{ steps.alcances.outputs.lista }}
           requireScope: false
           subjectPattern: ^(?![A-Z]).+$
           subjectPatternError: La descripción del título empieza en minúscula.

@@ -34,7 +34,9 @@ Co-authored-by: Nombre <correo>
 | `style` | Formato sin cambio de significado |
 | `refactor` | Reorganizar páginas sin cambiar lo que dicen |
 
-Alcances permitidos: `arquitectura`, `principios`, `git`, `pruebas`, `datos`, `apis`, `sistemas-distribuidos`, `seguridad`, `operaciones`, `repo`, `deps`. El alcance es opcional.
+Alcances permitidos: el nombre exacto de cualquier carpeta de contenido (las carpetas de la raíz que lista `scripts/carpetas.sh`), más `repo` y `deps`. El alcance es opcional.
+
+Para dar de alta un apartado nuevo basta con crear su carpeta y añadirla al índice del README: los alcances, el check del título del PR y el check de referencias leen las carpetas con `scripts/carpetas.sh` y no hay que editar ninguna lista.
 
 Ejemplo: `docs(arquitectura): agrega la página de arquitectura hexagonal`.
 
@@ -57,7 +59,7 @@ git log --format='%h %s%n%(trailers:key=Co-authored-by)'
 
 ## Estructura de una página
 
-Cada página del contenido (`arquitectura/`, `principios/`, `git/`, `pruebas/`, `datos/`, `apis/`, `sistemas-distribuidos/`, `seguridad/`, `operaciones/`) es de un solo tipo según [Diátaxis](https://diataxis.fr/): explicación, referencia o guía práctica. No mezcles tipos en una página.
+Cada página del contenido (las carpetas del índice del README) es de un solo tipo según [Diátaxis](https://diataxis.fr/): explicación, referencia o guía práctica. No mezcles tipos en una página.
 
 Usa estas secciones, en este orden:
 
