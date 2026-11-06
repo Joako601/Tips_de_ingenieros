@@ -85,7 +85,7 @@ flowchart LR
 - **"Es lo mismo que capas."** En capas la dependencia va de arriba hacia abajo, y la capa de negocio suele depender de la de datos. Aquí la aplicación define el puerto de persistencia y el adaptador de datos depende de ella: la dependencia se invierte.
 - **"Todo `interface` es un puerto."** Un puerto nace de un propósito de la aplicación ("guardar pedidos"), no de una tecnología ("`JpaRepository` de pedidos"). Si el nombre del puerto menciona la tecnología, es un adaptador disfrazado.
 - **"Exige usar DDD."** El patrón no dice nada sobre cómo organizar el interior de la aplicación. Se combina bien con *Domain-Driven Design*, pero no lo requiere.
-- **Hexagonal, onion y clean.** Comparten la idea de proteger la lógica y dirigir las dependencias hacia adentro. Jeffrey Palermo presentó la *Onion Architecture* en 2008 citando la hexagonal como antecedente, y Robert C. Martin la nombra en 2012 entre las arquitecturas que unifica la *Clean Architecture*. La diferencia es de énfasis: hexagonal solo distingue adentro y afuera; onion y clean además proponen anillos con nombre dentro de la aplicación.
+- **Hexagonal, onion y clean.** Comparten la idea de proteger la lógica y dirigir las dependencias hacia adentro. Jeffrey Palermo presentó la *Onion Architecture* en 2008 citando la hexagonal como antecedente, y Robert C. Martin la nombra en 2012 entre las arquitecturas que unifica la [*Clean Architecture*](clean-architecture.md). La diferencia es de énfasis: hexagonal solo distingue adentro y afuera; onion y clean además proponen anillos con nombre dentro de la aplicación.
 
 ## Ejemplo
 
