@@ -6,6 +6,15 @@ exclude = ['^https://doi\.org/10\.1145/', '^https://dl\.acm\.org/', '^https://ww
 exclude_path = ['(^|/)node_modules/', '(^|/)\.vale/styles/']
 include_fragments = "full"
 accept = ["200..=299", "429"]
-max_retries = 3
+# web.archive.org responde con 500 y errores de HTTP/2 de forma intermitente; la causa probable es el exceso de peticiones simultáneas.
+# Se reintenta más veces, con más espera, y esos fallos no se guardan en la caché.
+max_retries = 5
+retry_wait_time = 5
 cache = true
+cache_exclude_status = "500.."
 max_cache_age = "1d"
+
+# Pocas peticiones a la vez y espaciadas hacia el servidor que más falla, que es donde están las copias archivadas.
+[hosts."web.archive.org"]
+concurrency = 2
+request_interval = "1s"
