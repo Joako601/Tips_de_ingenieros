@@ -8,7 +8,7 @@
 
 Cuando un sistema crece como una sola aplicación desplegable, las fronteras entre conceptos de negocio suelen desdibujarse: el código de pedidos consulta las tablas de inventario, el de pagos instancia clases internas de clientes y todo termina dependiendo de todo. A ese resultado se le llama *gran bola de lodo* (*Big Ball of Mud*).
 
-Para escapar de ese desorden, muchos equipos saltan a una arquitectura de microservicios antes de tiempo. El resultado frecuente es cambiar un problema de organización de código por los costos de un sistema distribuido: fallos de red, transacciones partidas, despliegues coordinados y mayor carga operativa.
+Para escapar de ese desorden, muchos equipos saltan a una arquitectura de [microservicios](microservicios.md) antes de tiempo. El resultado frecuente es cambiar un problema de organización de código por los costos de un sistema distribuido: fallos de red, transacciones partidas, despliegues coordinados y mayor carga operativa.
 
 ## La idea central
 

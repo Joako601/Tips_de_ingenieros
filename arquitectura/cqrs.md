@@ -45,7 +45,7 @@ Una variante más avanzada usa bases separadas, una optimizada para escribir y o
 | Se gana | Se pierde |
 | --- | --- |
 | Un modelo de escritura enfocado en reglas, sin *getters* para pantallas | Dos modelos que mantener y mantener alineados |
-| Consultas optimizadas para cada vista, sin pasar por el ORM | Más código y más conceptos para el equipo |
+| Consultas optimizadas para cada vista, sin pasar por el [ORM](../datos/orm-y-problema-n-mas-1.md) | Más código y más conceptos para el equipo |
 | Escalar lecturas y escrituras por separado, si se usan bases distintas | Con bases separadas: consistencia eventual y mecanismos de sincronización |
 | Repositorios con pocos métodos: guardar y buscar por identificador | Riesgo alto si se aplica a un dominio que no lo necesita |
 
