@@ -99,7 +99,7 @@ git push -u origin docs/estrategias-de-ramas
 # Se abre el pull request, se revisa y se fusiona con squash.
 ```
 
-Para un sistema de pedidos que se despliega varias veces por día, el mismo flujo alcanza. Si una función nueva de descuentos tarda una semana, se integra en partes pequeñas detrás de un *feature flag* apagado, en lugar de vivir una semana en una rama.
+Para un sistema de pedidos que se despliega varias veces por día, el mismo flujo alcanza. Si una función nueva de descuentos tarda una semana, se integra en partes pequeñas detrás de un [*feature flag*](../operaciones/ci-cd-y-feature-flags.md) apagado, en lugar de vivir una semana en una rama.
 
 Si en cambio el sistema de pedidos se vendiera como producto instalable, con clientes en la versión 2.x y otros en la 3.x, haría falta una rama `release/2.x` para seguir publicando correcciones de esa versión. Ese es el caso que Git Flow resuelve bien.
 
