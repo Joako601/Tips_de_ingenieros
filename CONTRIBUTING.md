@@ -78,7 +78,7 @@ Usa estas secciones, en este orden:
 Última revisión: AAAA-MM-DD
 ```
 
-Un check del CI exige que cada página de contenido tenga la sección `## Referencias`.
+Un check del CI exige que cada página de contenido tenga la sección `## Referencias`. Un workflow mensual (`frescura`) avisa de las páginas cuya "Última revisión" tiene más de un año; al revisar una página, actualiza esa fecha.
 
 ## Fuentes y citas
 
