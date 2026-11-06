@@ -6,6 +6,7 @@
 #   scripts/comprobar.sh referencias           corre solo los que nombres
 #
 # Chequeos: referencias, ortografia, markdown, prosa, enlaces.
+# Además existe frescura (páginas sin revisar en más de un año), que no corre por defecto.
 # Las carpetas de contenido salen de scripts/carpetas.sh y las versiones de cspell, de calidad.yml.
 # El script no descarga ni ejecuta binarios sueltos: vale y lychee se usan solo si ya están instalados.
 
@@ -16,6 +17,7 @@ FLUJO=.github/workflows/calidad.yml
 MARKDOWNLINT_CLI2=0.24.0   # la versión que trae markdownlint-cli2-action v25.0.0
 
 todos=(referencias ortografia markdown prosa enlaces)
+validos=("${todos[@]}" frescura)
 pedidos=("$@")
 [ "${#pedidos[@]}" -eq 0 ] && pedidos=("${todos[@]}")
 
@@ -66,6 +68,10 @@ markdown() {
   return "$salida"
 }
 
+frescura() {
+  scripts/frescura.sh
+}
+
 prosa() {
   command -v vale >/dev/null || return 99
   vale --minAlertLevel=error .
@@ -77,9 +83,9 @@ enlaces() {
 }
 
 for nombre in "${pedidos[@]}"; do
-  case " ${todos[*]} " in
+  case " ${validos[*]} " in
     *" $nombre "*) ;;
-    *) echo "Chequeo desconocido: $nombre (los válidos son: ${todos[*]})"; exit 2 ;;
+    *) echo "Chequeo desconocido: $nombre (los válidos son: ${validos[*]})"; exit 2 ;;
   esac
   encabezado "$nombre"
   "$nombre"

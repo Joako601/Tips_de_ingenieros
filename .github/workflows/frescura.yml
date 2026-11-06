@@ -1,0 +1,17 @@
+name: frescura
+
+# Avisa de las páginas que llevan más de un año sin revisarse. Un job fallido notifica a quien administra el repositorio.
+on:
+  schedule:
+    - cron: "0 12 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  frescura:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - run: scripts/frescura.sh
