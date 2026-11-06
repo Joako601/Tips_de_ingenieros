@@ -6,9 +6,10 @@ Esta guía define cómo trabajamos: ramas, pull requests, mensajes de commit, co
 
 1. Crea una rama desde `main` actualizado. Nombre: `tipo/tema-corto`, por ejemplo `docs/hexagonal` o `ci/enlaces`.
 2. Haz commits pequeños que sigan [Conventional Commits](#mensajes-de-commit).
-3. Abre un pull request. El título también debe ser un Conventional Commit, porque es el mensaje que queda en `main`.
-4. La otra persona puede revisar y comentar; la aprobación es opcional. Quien abrió el PR responde todas las conversaciones.
-5. Se fusiona con **merge commit** o con **squash and merge**. Con merge commit llegan a `main` los commits de la rama, cada uno con su trailer; con squash, el mensaje del commit único debe conservarlos. Antes de confirmar, quien fusiona revisa los trailers `Co-authored-by`.
+3. Antes de abrir el pull request, corre `scripts/comprobar.sh`: repite en local las comprobaciones de `calidad.yml` (referencias, ortografía, markdown, prosa y enlaces). Los de prosa y enlaces solo corren si tienes `vale` y `lychee` instalados; el CI los corre siempre. Si `markdownlint-cli2` se cae con tu versión de Node, el script lo repite dentro de Docker.
+4. Abre un pull request. El título también debe ser un Conventional Commit, porque es el mensaje que queda en `main`.
+5. La otra persona puede revisar y comentar; la aprobación es opcional. Quien abrió el PR responde todas las conversaciones.
+6. Se fusiona con **merge commit** o con **squash and merge**. Con merge commit llegan a `main` los commits de la rama, cada uno con su trailer; con squash, el mensaje del commit único debe conservarlos. Antes de confirmar, quien fusiona revisa los trailers `Co-authored-by`.
 
 `main` está protegida por un ruleset sin excepciones, ni siquiera para quien administra el repositorio: no se puede hacer push directo ni force push, y el PR necesita todas las conversaciones resueltas, los checks en verde y la rama al día con `main`. No exige aprobación de otra persona.
 
