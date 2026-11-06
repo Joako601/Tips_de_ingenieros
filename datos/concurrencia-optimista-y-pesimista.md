@@ -61,7 +61,7 @@ Si la transacción de negocio dura más que una petición, el bloqueo pesimista 
 - **"El bloqueo pesimista (`SELECT ... FOR UPDATE`) siempre es malo porque frena la base de datos."** Con mucha contención sobre la misma fila, el optimista produce una cadena de reintentos fallidos, y bloquear es más eficiente: las transacciones esperan su turno en lugar de repetir trabajo.
 - **"`@Version` bloquea la fila."** No bloquea nada. Solo detecta, al guardar, que otro cambió la fila.
 - **"Con concurrencia optimista no hace falta manejar errores."** La excepción de conflicto es parte del diseño. Si nadie la captura, el usuario ve un error genérico en lugar de "otra persona modificó este pedido; recarga para ver los cambios".
-- **"Optimista y pesimista son niveles de aislamiento."** Son estrategias de la aplicación o del ORM. Funcionan sobre cualquier nivel de aislamiento, incluido `READ COMMITTED`.
+- **"Optimista y pesimista son niveles de aislamiento."** Son estrategias de la aplicación o del [ORM](orm-y-problema-n-mas-1.md). Funcionan sobre cualquier nivel de aislamiento, incluido `READ COMMITTED`.
 
 ## Ejemplo
 
