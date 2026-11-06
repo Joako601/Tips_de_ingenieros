@@ -77,7 +77,7 @@ flowchart LR
 ## Cuándo no usarlo
 
 - **Repositorios personales o de un solo uso.** Si nadie más lee el historial y no publicas versiones, la convención agrega pasos sin un lector que los aproveche.
-- **Validar cada commit en equipos que fusionan con *squash*.** Si el commit que llega a `main` toma el título del *pull request*, el formato de los commits intermedios se pierde; en ese caso conviene validar el título del PR, que es lo que queda.
+- **Validar cada commit en equipos que fusionan con [*squash*](merge-rebase-y-squash.md).** Si el commit que llega a `main` toma el título del *pull request*, el formato de los commits intermedios se pierde; en ese caso conviene validar el título del PR, que es lo que queda.
 - **Proyectos que no se versionan.** Gran parte del valor está en automatizar SemVer y las notas de versión. Sin versiones, queda solo el beneficio de un historial ordenado, que se puede lograr con reglas más livianas.
 - **Como sustituto de commits pequeños.** Un prefijo correcto no arregla un commit que mezcla tres cambios. La especificación misma recomienda separar el trabajo en varios commits cuando un cambio encaja en más de un tipo.
 
