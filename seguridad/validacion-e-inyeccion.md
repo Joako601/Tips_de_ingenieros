@@ -54,7 +54,7 @@ Para SQL, la hoja de OWASP ordena las defensas: primero consultas preparadas; de
 
 ## Confusiones frecuentes
 
-- **"Como uso JPA / Hibernate o Entity Framework Core, soy inmune a la inyección SQL."** Un ORM no lo impide por sí solo. La hoja de OWASP advierte que las consultas de Hibernate pueden ser vulnerables a la inyección y aconseja enlazar los valores no confiables en lugar de concatenarlos. Armar `"FROM PedidoEntity p WHERE p.clienteId = '" + clienteId + "'"` es tan vulnerable como el SQL plano.
+- **"Como uso JPA / Hibernate o Entity Framework Core, soy inmune a la inyección SQL."** Un [ORM](../datos/orm-y-problema-n-mas-1.md) no lo impide por sí solo. La hoja de OWASP advierte que las consultas de Hibernate pueden ser vulnerables a la inyección y aconseja enlazar los valores no confiables en lugar de concatenarlos. Armar `"FROM PedidoEntity p WHERE p.clienteId = '" + clienteId + "'"` es tan vulnerable como el SQL plano.
 - **"Si valido la entrada, puedo concatenarla."** Validar un valor no lo hace seguro para concatenarlo en SQL. La validación reduce el abanico de entradas; la parametrización es lo que separa dato y comando.
 - **"Escapar las comillas basta."** El escapado depende del dialecto y de la configuración de la base de datos; OWASP lo señala como la opción más débil y pide no usarlo en lugar del enlace de parámetros.
 - **"Los procedimientos almacenados son seguros por definición."** Enlazar los argumentos protege la llamada, no el SQL dinámico que se arma dentro del procedimiento.
