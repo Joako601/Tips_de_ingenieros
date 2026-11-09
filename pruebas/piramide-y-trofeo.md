@@ -45,7 +45,7 @@ flowchart TB
 
 Fowler señala en 2021 que la diferencia entre las dos formas es en buena parte de vocabulario. "Prueba unitaria" y "prueba de integración" no tienen una definición única. Él distingue dos estilos de prueba unitaria:
 
-- **Solitaria:** reemplaza todos los colaboradores de la clase por dobles de prueba.
+- **Solitaria:** reemplaza todos los colaboradores de la clase por [dobles de prueba](dobles-de-prueba.md).
 - **Sociable:** usa los colaboradores reales cuando es práctico.
 
 Muchas de las "pruebas de integración" del trofeo son pruebas unitarias sociables en el vocabulario de la pirámide. Las dos formas coinciden en lo importante: pocas pruebas de punta a punta y una base amplia de pruebas rápidas que se puedan ejecutar todo el tiempo.
