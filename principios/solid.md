@@ -67,7 +67,7 @@ flowchart TB
 | --- | --- |
 | Los cambios de un área de negocio quedan contenidos en sus propios módulos | Más interfaces y tipos que navegar para seguir el flujo de ejecución |
 | Agregar variantes nuevas (como otra regla de descuento) sin tocar código probado | Riesgo de diseñar puntos de extensión para cambios que nunca ocurren |
-| Pruebas unitarias rápidas al sustituir detalles externos por dobles de prueba | Curva de aprendizaje para distinguir cuándo una abstracción aporta y cuándo estorba |
+| Pruebas unitarias rápidas al sustituir detalles externos por [dobles de prueba](../pruebas/dobles-de-prueba.md) | Curva de aprendizaje para distinguir cuándo una abstracción aporta y cuándo estorba |
 | Conexión directa con estilos como la [arquitectura hexagonal](../arquitectura/hexagonal.md) y la [Clean Architecture](../arquitectura/clean-architecture.md), que aplican DIP a escala de sistema | Discusiones de revisión cuando se toman los principios como dogmas |
 
 ## Confusiones frecuentes

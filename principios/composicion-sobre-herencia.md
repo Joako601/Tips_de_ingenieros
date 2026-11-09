@@ -14,7 +14,7 @@ Hay un segundo problema, menos visible: la subclase depende de cómo está imple
 
 ## La idea central
 
-En 1994, el libro de patrones de diseño de Gamma, Helm, Johnson y Vlissides formuló el principio como **preferir la composición de objetos a la herencia de clases**.
+En 1994, el libro de [patrones de diseño](patrones-de-diseno.md) de Gamma, Helm, Johnson y Vlissides formuló el principio como **preferir la composición de objetos a la herencia de clases**.
 
 - **Herencia:** la clase hija reutiliza la implementación de la padre. Los autores la llaman reutilización de **caja blanca**, porque la hija ve los detalles internos de la padre. Por esa exposición, recuerdan, se suele decir que la herencia rompe el encapsulamiento.
 - **Composición:** un objeto obtiene comportamiento delegando en otros objetos a través de sus interfaces. Es reutilización de **caja negra**: solo importa lo que el otro objeto promete, no cómo lo hace.
