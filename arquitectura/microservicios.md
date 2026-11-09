@@ -43,14 +43,14 @@ flowchart LR
     BROKER --> PAG
 ```
 
-Al separar los datos se pierde la transacción única. Lewis y Fowler señalan que los microservicios prefieren coordinar sin transacciones distribuidas, aceptan que la consistencia entre servicios sea **eventual** y corrigen los problemas con **operaciones compensatorias**. Esa es la decisión que más cambia la forma de programar.
+Al separar los datos se pierde la [transacción única](../datos/transacciones-y-acid.md). Lewis y Fowler señalan que los microservicios prefieren coordinar sin transacciones distribuidas, aceptan que la consistencia entre servicios sea **eventual** y corrigen los problemas con **operaciones compensatorias**. Esa es la decisión que más cambia la forma de programar.
 
 ## Cuándo no usarlo
 
 - **Cuando el sistema todavía no es complejo.** Fowler habla de una *prima* (*Microservice Premium*): los microservicios agregan costos propios, como despliegue automatizado, monitoreo, manejo de fallos y consistencia eventual. Su recomendación es no considerarlos salvo que el sistema sea demasiado complejo para manejarlo como monolito.
 - **Cuando todavía no conoces las fronteras del dominio.** Mover una frontera entre módulos es refactorizar paquetes. Moverla entre servicios es cambiar contratos de red y migrar datos. Un [monolito modular](monolito-modular.md) permite descubrir esas fronteras a menor costo.
 - **Equipos pequeños.** Si un solo equipo mantiene todo, la independencia de despliegue aporta poco y la carga operativa es la misma.
-- **Sin automatización de despliegue ni observabilidad.** Con diez servicios, desplegar a mano o diagnosticar un error sin trazas distribuidas es inmanejable.
+- **Sin automatización de despliegue ni observabilidad.** Con diez servicios, desplegar a mano o diagnosticar un error sin [trazas distribuidas](../operaciones/logs-metricas-y-trazas.md) es inmanejable.
 
 ## Qué se gana y qué se pierde
 
