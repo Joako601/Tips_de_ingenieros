@@ -20,7 +20,7 @@ El patrón más usado es ***cache-aside*** (también llamado carga bajo demanda)
 
 Al escribir, la aplicación **actualiza primero la base de datos y después invalida** la entrada de la caché. La siguiente lectura la volverá a cargar con el valor nuevo. El orden importa: si se borra la entrada antes de actualizar la base, una lectura intermedia puede recargar el valor viejo y dejarlo guardado.
 
-El artículo de Nishtala y colegas sobre la memcache de Facebook describe el mismo esquema, al que llama caché de consulta "bajo demanda y a un lado" (*demand-filled look-aside*). En las escrituras prefieren **borrar** el dato de la caché en lugar de actualizarlo, y dan una razón: los borrados son idempotentes. Añaden que la caché no es la fuente autoritativa del dato, por lo que puede descartar entradas.
+El artículo de Nishtala y colegas sobre la memcache de Facebook describe el mismo esquema, al que llama caché de consulta "bajo demanda y a un lado" (*demand-filled look-aside*). En las escrituras prefieren **borrar** el dato de la caché en lugar de actualizarlo, y dan una razón: los borrados son [idempotentes](../apis/idempotencia-y-reintentos.md). Añaden que la caché no es la fuente autoritativa del dato, por lo que puede descartar entradas.
 
 Dos mecanismos controlan cuánto dura un dato guardado:
 

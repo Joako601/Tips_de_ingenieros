@@ -10,7 +10,7 @@ Se llama "API REST" a casi cualquier servicio que intercambia JSON por HTTP. Muc
 
 Funcionan, pero pierden lo que HTTP ofrece gratis:
 
-- Los intermediarios no pueden guardar en caché las lecturas si todas son `POST`.
+- Los intermediarios no pueden [guardar en caché](../operaciones/cache.md) las lecturas si todas son `POST`.
 - Un cliente no puede saber si es seguro repetir una petición que se cortó.
 - Las herramientas de monitoreo ven `200` en todas las respuestas y no detectan los errores.
 
@@ -36,7 +36,7 @@ En 2008 Fielding escribió que, si la API no está guiada por hipertexto, no es 
 En el **nivel 2**, cada método HTTP se usa con el significado que le da la especificación, el RFC 9110:
 
 - **`GET` es seguro:** no pide cambios en el servidor. Fowler destaca la consecuencia: cualquier participante del camino puede guardar la respuesta en caché.
-- **`PUT` y `DELETE` son idempotentes:** repetirlos tiene el mismo efecto que hacerlos una vez.
+- **`PUT` y `DELETE` son [idempotentes](idempotencia-y-reintentos.md):** repetirlos tiene el mismo efecto que hacerlos una vez.
 - **`POST` no es seguro ni idempotente:** se usa para crear o para operaciones que no encajan en los otros métodos.
 - **Los códigos de estado dicen qué pasó.** `201 Created` indica que se creó un recurso, y la cabecera `Location` dice dónde está. `409 Conflict` indica un conflicto con el estado actual del recurso.
 

@@ -119,7 +119,7 @@ class PedidoController {
 }
 ```
 
-Fíjate en la dependencia de `ServicioDePedidos` hacia `PedidoRepository`, que extiende `JpaRepository`: la regla de negocio está atada a JPA. Para probarla necesitas una base de datos o un *mock* de una interfaz de Spring Data. Compáralo con el [ejemplo de la arquitectura hexagonal](hexagonal.md#ejemplo), donde el servicio solo conoce un puerto propio.
+Fíjate en la dependencia de `ServicioDePedidos` hacia `PedidoRepository`, que extiende `JpaRepository`: la regla de negocio está atada a JPA. Para probarla necesitas una base de datos o un [*mock*](../pruebas/dobles-de-prueba.md) de una interfaz de Spring Data. Compáralo con el [ejemplo de la arquitectura hexagonal](hexagonal.md#ejemplo), donde el servicio solo conoce un puerto propio.
 
 En C# con ASP.NET Core la estructura es la misma: un `Controller`, un servicio registrado en el contenedor y un `DbContext` de Entity Framework Core como capa de datos.
 
