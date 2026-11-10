@@ -21,7 +21,7 @@ Para desarrolladores que ya programan y quieren entender por qué se recomiendan
 | `sistemas-distribuidos/` | Outbox y eventos, sagas, timeouts, reintentos y circuit breaker | Publicado |
 | `seguridad/` | Sesiones y JWT, autorización y BOLA, validación e inyección | Publicado |
 | `operaciones/` | Logs, métricas y trazas, caché, CI/CD y feature flags | Publicado |
-| `modelado-de-dominio/` | Lenguaje ubicuo y contextos, entidades y objetos de valor, agregados | En curso |
+| `modelado-de-dominio/` | Lenguaje ubicuo y contextos, entidades y objetos de valor, agregados | Publicado |
 
 ## Cómo leer cada página
 
