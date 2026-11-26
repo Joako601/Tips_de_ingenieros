@@ -22,7 +22,7 @@ Para desarrolladores que ya programan y quieren entender por qué se recomiendan
 | `seguridad/` | Sesiones y JWT, autorización y BOLA, validación e inyección | Publicado |
 | `operaciones/` | Logs, métricas y trazas, caché, CI/CD y feature flags | Publicado |
 | `modelado-de-dominio/` | Lenguaje ubicuo y contextos, entidades y objetos de valor, agregados | Publicado |
-| `concurrencia/` | Condiciones de carrera y memoria compartida | Publicado |
+| `concurrencia/` | Condiciones de carrera y memoria compartida, bloqueos y deadlocks | Publicado |
 
 ## Cómo leer cada página
 

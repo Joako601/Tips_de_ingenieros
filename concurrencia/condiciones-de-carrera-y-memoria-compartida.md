@@ -45,7 +45,7 @@ Para corregirlo hay tres caminos, de menor a mayor costo de diseño:
 
 ## Cuándo no usarlo
 
-- **No sincronices por reflejo.** Un bloqueo sobre un dato que solo toca un hilo, o sobre un objeto inmutable, solo añade costo y abre la puerta a bloqueos mutuos.
+- **No sincronices por reflejo.** Un bloqueo sobre un dato que solo toca un hilo, o sobre un objeto inmutable, solo añade costo y abre la puerta a [bloqueos mutuos](bloqueos-y-deadlocks.md).
 - **Un candado en memoria no protege entre procesos.** Si la aplicación corre en varias instancias, `synchronized` no impide que dos instancias vendan la misma unidad; ahí hace falta la base de datos o un mecanismo distribuido.
 - **No uses `volatile` como sustituto de un candado** cuando la operación tiene varios pasos: garantiza visibilidad, pero `stock--` sobre un campo `volatile` sigue siendo leer, restar y escribir.
 
